@@ -33,6 +33,7 @@ tools:
 - tools/nano_banana_generate.yaml
 - tools/nano_banana_edit.yaml
 - tools/nano_banana_task_retrieve.yaml
+- tools/nano_banana_tasks_retrieve_batch.yaml
 extra:
   python:
     source: provider/nano_banana.py

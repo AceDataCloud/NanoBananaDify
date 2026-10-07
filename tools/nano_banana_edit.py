@@ -9,19 +9,23 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 from tools.acedata_client import AceDataNanoBananaClient
 
 
-class NanoBananaEditImageTool(Tool):
+class NanoBananaEditTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage, None, None]:
-        client = AceDataNanoBananaClient(
-            bearer_token=self.runtime.credentials.get("acedata_bearer_token", "")
-        )
-        result = client.execute("edit", tool_parameters)
+        result = AceDataNanoBananaClient(
+            self.runtime.credentials.get("acedata_bearer_token", "")
+        ).invoke("nano_banana_edit_image", tool_parameters)
         yield self.create_json_message(result)
-        for field in ["status", "task_id", "media_urls", "result"]:
-            yield self.create_variable_message(field, result[field])
-        yield self.create_variable_message("success", result["status"] == "succeeded")
-        yield self.create_variable_message("trace_id", result["result"].get("trace_id") or "")
-        yield self.create_variable_message(
-            "data", result["result"].get("data", result["result"].get("content", {}))
-        )
+        for name, value in result.items():
+            yield self.create_variable_message(name, value)
         for url in result["media_urls"]:
-            yield self.create_image_message(url)
+            if (
+                "image" == "image"
+                or "image" == "mixed"
+                and any(
+                    suffix in url.lower().split("?")[0]
+                    for suffix in [".png", ".jpg", ".jpeg", ".webp"]
+                )
+            ):
+                yield self.create_image_message(url)
+            else:
+                yield self.create_link_message(url)

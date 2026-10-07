@@ -1,0 +1,64 @@
+{
+  "backend_revision": "fa94598267a82545fb1afed6ee26bafd6cbb9ca7",
+  "mcp_revision": "f0eed10abf310824cb4c33d4944c63d3654ac95b",
+  "tools": [
+    {
+      "tool": "nano_banana_generate_image",
+      "method": "POST",
+      "path": "/nano-banana/images",
+      "parameters": [
+        "model",
+        "prompt",
+        "image_urls",
+        "count",
+        "aspect_ratio",
+        "resolution",
+        "callback_url"
+      ],
+      "aliases": {},
+      "schema_source": "openapi/9d8a117e-31ca-4322-a0fd-1771296ec610.json"
+    },
+    {
+      "tool": "nano_banana_edit_image",
+      "method": "POST",
+      "path": "/nano-banana/images",
+      "parameters": [
+        "model",
+        "prompt",
+        "image_urls",
+        "count",
+        "aspect_ratio",
+        "resolution",
+        "callback_url"
+      ],
+      "aliases": {},
+      "schema_source": "openapi/9d8a117e-31ca-4322-a0fd-1771296ec610.json"
+    },
+    {
+      "tool": "nano_banana_task_retrieve",
+      "method": "POST",
+      "path": "/nano-banana/tasks",
+      "parameters": [
+        "task_id",
+        "wait_seconds"
+      ],
+      "aliases": {},
+      "schema_source": "openapi/72e9188b-99df-4e3a-85e4-8e3dbf389790.json"
+    },
+    {
+      "tool": "nano_banana_tasks_retrieve_batch",
+      "method": "POST",
+      "path": "/nano-banana/tasks",
+      "parameters": [
+        "ids"
+      ],
+      "aliases": {},
+      "schema_source": "openapi/72e9188b-99df-4e3a-85e4-8e3dbf389790.json"
+    }
+  ],
+  "mcp_scope": "nanobanana",
+  "notes": [
+    "Informational MCP model/action lists are represented by tool dropdowns and README capability tables.",
+    "GPT Image covers image-generation/editing/task capabilities of the broader OpenAI MCP; chat is supplied by ModelProviderDify."
+  ]
+}

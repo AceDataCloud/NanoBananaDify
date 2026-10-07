@@ -1,0 +1,48 @@
+[
+  {
+    "name": "nano_banana_generate_image-1",
+    "tool": "nano_banana_generate_image",
+    "inputs": {
+      "prompt": "Test",
+      "model": "nano-banana-2-lite:official"
+    },
+    "method": "POST",
+    "path": "/nano-banana/images",
+    "body": {
+      "model": "nano-banana-2-lite:official",
+      "action": "generate"
+    }
+  },
+  {
+    "name": "nano_banana_edit_image-2",
+    "tool": "nano_banana_edit_image",
+    "inputs": {
+      "prompt": "Edit",
+      "image_urls": "[\"https://example.org/reference.png\"]"
+    },
+    "method": "POST",
+    "path": "/nano-banana/images",
+    "body": {
+      "action": "edit",
+      "image_urls": [
+        "https://example.org/reference.png"
+      ]
+    }
+  },
+  {
+    "name": "nano_banana_tasks_retrieve_batch-3",
+    "tool": "nano_banana_tasks_retrieve_batch",
+    "inputs": {
+      "ids": "[\"owned-task\"]"
+    },
+    "method": "POST",
+    "path": "/nano-banana/tasks",
+    "body": {
+      "action": "retrieve_batch",
+      "ids": [
+        "owned-task"
+      ]
+    },
+    "read_only": true
+  }
+]
