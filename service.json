@@ -1,0 +1,12 @@
+{
+  "family": "nano",
+  "prefix": "/nano-banana",
+  "media": "image",
+  "default": "nano-banana-2-lite",
+  "models": [
+    "nano-banana",
+    "nano-banana-2-lite",
+    "nano-banana-2",
+    "nano-banana-pro"
+  ]
+}

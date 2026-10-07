@@ -1,0 +1,36 @@
+version: 0.0.1
+type: plugin
+author: acedatacloud
+name: nano_banana
+label:
+  en_US: Nano Banana by Ace Data Cloud
+  zh_Hans: Nano Banana by Ace Data Cloud
+description:
+  en_US: Generate and edit Nano Banana images with Ace Data Cloud.
+icon: icon.png
+icon_dark: icon.png
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+plugins:
+  tools:
+  - provider/nano_banana.yaml
+meta:
+  version: 0.0.1
+  minimum_dify_version: 1.17.1
+  arch:
+  - amd64
+  - arm64
+  runner:
+    language: python
+    version: '3.12'
+    entrypoint: main
+created_at: '2026-10-07T12:00:00+08:00'
+privacy: PRIVACY.md
+repo: https://github.com/AceDataCloud/NanoBananaDify
+contact: dev@acedata.cloud
+network:
+  domains:
+  - api.acedata.cloud

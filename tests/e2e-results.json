@@ -1,0 +1,61 @@
+{
+  "tested_at": "2026-10-07",
+  "environment": "Dify CE 1.17.1 / plugin daemon 0.6.10-local, official remote-debug, console API workflows",
+  "signature_verification": true,
+  "browser_ui_tested": false,
+  "marketplace_install_tested": false,
+  "cases": [
+    {
+      "case": "nano-generate",
+      "operation": "generate",
+      "workflow_status": "succeeded",
+      "task_status": "pending",
+      "task_id": "c9cf9312-12dd-4cd9-ac6c-3e63fcc5a964",
+      "media_urls": []
+    },
+    {
+      "case": "nano-result",
+      "operation": "task",
+      "workflow_status": "succeeded",
+      "task_status": "succeeded",
+      "task_id": "c9cf9312-12dd-4cd9-ac6c-3e63fcc5a964",
+      "media_urls": [
+        "https://cdn.acedata2.cloud/nanobanana/1ce6735d5ddee942c2d895fd5461db5fbef8c0a23460422315824f30a846ef98.jpg"
+      ]
+    },
+    {
+      "case": "nano-edit",
+      "operation": "edit",
+      "workflow_status": "succeeded",
+      "task_status": "pending",
+      "task_id": "1ffa1e9c-4322-4f96-adbe-1d9a70794e1a",
+      "media_urls": []
+    },
+    {
+      "case": "nano-edit-result",
+      "operation": "task",
+      "workflow_status": "succeeded",
+      "task_status": "succeeded",
+      "task_id": "1ffa1e9c-4322-4f96-adbe-1d9a70794e1a",
+      "media_urls": [
+        "https://cdn.acedata2.cloud/nanobanana/123a3075b014cd7c7cde2449d92aca55c449a58ecdacaeb9f3a2800cbbba8ad7.jpg"
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "case": "nano-generate",
+      "task_id": "c9cf9312-12dd-4cd9-ac6c-3e63fcc5a964",
+      "matched_records": 1,
+      "http_status": 200,
+      "deducted_credits": 0.126
+    },
+    {
+      "case": "nano-edit",
+      "task_id": "1ffa1e9c-4322-4f96-adbe-1d9a70794e1a",
+      "matched_records": 1,
+      "http_status": 200,
+      "deducted_credits": 0.126
+    }
+  ]
+}
