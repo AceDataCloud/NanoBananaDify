@@ -1,0 +1,38 @@
+identity:
+  author: acedatacloud
+  name: nano-banana
+  label:
+    en_US: Nano Banana
+    ja_JP: Nano Banana
+    zh_Hans: Nano Banana
+    pt_BR: Nano Banana
+  description:
+    en_US: Generate and edit images via Ace Data Cloud Nano Banana Images API.
+    ja_JP: Ace Data Cloud Nano Banana Images API を使って画像生成・編集を行います。
+    zh_Hans: 通过 Ace Data Cloud Nano Banana Images API 生成与编辑图片。
+    pt_BR: Gere e edite imagens via Ace Data Cloud Nano Banana Images API.
+  icon: icon.jpg
+  icon_dark: icon.jpg
+  tags:
+  - image
+credentials_for_provider:
+  acedata_bearer_token:
+    type: secret-input
+    required: true
+    label:
+      en_US: Ace Data Cloud Bearer Token
+      zh_Hans: Ace Data Cloud Token
+    placeholder:
+      en_US: Paste your token (without "Bearer ")
+      zh_Hans: 粘贴 Token（不需要带 Bearer）
+    help:
+      en_US: Acquire a token with access to this service from the Ace Data Cloud console.
+      zh_Hans: 从 Ace Data Cloud 控制台获取具有此服务权限的 Token。
+    url: https://platform.acedata.cloud/console/credentials
+tools:
+- tools/nano_banana_generate.yaml
+- tools/nano_banana_edit.yaml
+- tools/nano_banana_task_retrieve.yaml
+extra:
+  python:
+    source: provider/nano_banana.py

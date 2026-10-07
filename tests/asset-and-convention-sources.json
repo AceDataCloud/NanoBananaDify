@@ -1,0 +1,32 @@
+{
+  "id": "nano-banana",
+  "title": "Nano Banana",
+  "origin": {
+    "repository": "AceDataCloud/Dify",
+    "revision": "eaf0e68cd34cfe4cadece7a9ee34a98aac6b961e^",
+    "path": "plugins/nano-banana/_assets/icon.jpg"
+  },
+  "icons": {
+    "icon.jpg": "a1ba1dca76ebf40063132f567d49b62af24a1811a26ebb935b46ceb164785c05"
+  },
+  "tools": [
+    {
+      "operation": "generate",
+      "file": "nano_banana_generate",
+      "id": "nano_banana_generate_image",
+      "class": "NanoBananaGenerateImageTool"
+    },
+    {
+      "operation": "edit",
+      "file": "nano_banana_edit",
+      "id": "nano_banana_edit_image",
+      "class": "NanoBananaEditImageTool"
+    },
+    {
+      "operation": "task",
+      "file": "nano_banana_task_retrieve",
+      "id": "nano_banana_task_retrieve",
+      "class": "NanoBananaTaskRetrieveTool"
+    }
+  ]
+}

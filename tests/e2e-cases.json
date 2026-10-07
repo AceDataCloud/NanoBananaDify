@@ -1,0 +1,25 @@
+[
+  {
+    "label": "nano-generate",
+    "operation": "generate",
+    "parameters": {
+      "prompt": "A single teal ceramic cube on a plain cream background, studio product photograph, no text. Dify integration test.",
+      "model": "nano-banana-2-lite",
+      "resolution": "1K",
+      "aspect_ratio": "1:1",
+      "count": 1
+    }
+  },
+  {
+    "label": "nano-edit",
+    "operation": "edit",
+    "parameters": {
+      "prompt": "Change the teal cube to coral red. Keep the cream background and composition.",
+      "image_urls": "https://cdn.acedata2.cloud/nanobanana/1ce6735d5ddee942c2d895fd5461db5fbef8c0a23460422315824f30a846ef98.jpg",
+      "model": "nano-banana-2-lite",
+      "resolution": "1K",
+      "aspect_ratio": "1:1",
+      "count": 1
+    }
+  }
+]
