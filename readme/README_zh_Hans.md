@@ -1,4 +1,22 @@
-# Nano Banana by Ace Data Cloud
+# Nano Banana
+
+**Author:** acedatacloud
+
+**Type:** tool provider plugin
+
+**API:** `https://api.acedata.cloud/nano-banana/images`
+
+## 工具
+
+| 工具 ID | 功能 | 参数 |
+|---|---|---|
+| `nano_banana_generate_image` | Nano Banana 生成图片 | `prompt`, `model`, `aspect_ratio`, `resolution`, `count` |
+| `nano_banana_edit_image` | Nano Banana 编辑图片 | `prompt`, `model`, `aspect_ratio`, `resolution`, `count`, `image_urls` |
+| `nano_banana_task_retrieve` | Nano Banana 查询任务 | `task_id`, `wait_seconds` |
+
+输出包含 `status`、`task_id`、`media_urls`、`result`，以及旧插件约定的 `success`、`trace_id`、`data`。`success` 仅在结果完成时为 true；失败会抛出工具错误。图片结果以 Dify 图片消息展示。
+
+凭据字段为 `acedata_bearer_token`，粘贴 Token 时不需要 `Bearer ` 前缀。
 
 通过 Ace Data Cloud 使用图片生成与编辑。插件免费安装，API 使用需要自己的账户与额度。
 
@@ -26,3 +44,7 @@ Key、提示词、歌词/文本及所选参考媒体 URL 通过 HTTPS 发给 `ap
 源码：https://github.com/AceDataCloud/NanoBananaDify
 
 支持：dev@acedata.cloud
+
+## 与旧 Dify 插件的对应
+
+本仓库沿用旧插件的服务图标、工具命名、Bearer Token 配置、中英文说明和代码组织方式。运行范围以上方工具表为准；这是独立的官方市场投稿，不是旧 19 插件发布链的恢复。
