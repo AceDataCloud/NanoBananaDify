@@ -77,18 +77,12 @@ parameters:
     zh_Hans: 图片链接
   human_description:
     en_US: Public HTTPS image URLs, one per line or a JSON array. Only submit images
-      you may use. Enter a JSON array or object where applicable. Enter a JSON array
-      or object where applicable. Enter a JSON array or object where applicable. Enter
-      a JSON array or object where applicable. Enter a JSON array or object where
-      applicable.
+      you may use. Enter a JSON array or object where applicable.
     zh_Hans: 需要编辑的图片链接。可以是可访问的 http 或 https URL，也可以是 `data:image/png;base64,iVBORw0KG...`
       格式的 Base64 编码图像字符串。每张图片大小不得超过 10MB。当 `action` 为 `edit` 时，此参数为必填项。 数组或对象请使用 JSON
       格式。
   llm_description: Public HTTPS image URLs, one per line or a JSON array. Only submit
-    images you may use. Enter a JSON array or object where applicable. Enter a JSON
-    array or object where applicable. Enter a JSON array or object where applicable.
-    Enter a JSON array or object where applicable. Enter a JSON array or object where
-    applicable.
+    images you may use. Enter a JSON array or object where applicable.
 - name: count
   type: number
   required: false
