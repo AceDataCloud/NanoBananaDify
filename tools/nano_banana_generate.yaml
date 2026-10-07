@@ -8,34 +8,21 @@ description:
   human:
     en_US: Generate an image with Ace Data Cloud Nano Banana Images API.
     zh_Hans: 通过 Ace Data Cloud Nano Banana Images API 生成图片。
-  llm: Generate an image from prompt via Ace Data Cloud Nano Banana Images API. Returns
-    a task ID; use the task retrieval tool to obtain completed media. Never repeat
-    a pending submission.
+  llm: Generate an image with Ace Data Cloud Nano Banana Images API. For asynchronous
+    results, preserve task_id and use the task retrieval tool until completion. A
+    successful submission is not completed output.
 parameters:
-- name: prompt
-  label:
-    en_US: Prompt
-    zh_Hans: 提示词
-  type: string
-  required: true
-  form: llm
-  human_description:
-    en_US: Text prompt used to generate the image.
-    zh_Hans: 描述希望生成或编辑的内容。
-  llm_description: Text prompt used to generate the image.
 - name: model
-  label:
-    en_US: Model
-    zh_Hans: 模型
   type: select
   required: false
   form: form
+  label:
+    en_US: Model
+    zh_Hans: 模型
   human_description:
-    en_US: Select the model. Available models, access and pricing are shown in the
-      Ace Data Cloud console.
-    zh_Hans: 选择要调用的模型。模型权限和价格以 Ace Data Cloud 控制台为准。
-  llm_description: Select the model. Available models, access and pricing are shown
-    in the Ace Data Cloud console.
+    en_US: Set model for this operation.
+    zh_Hans: 设置模型。
+  llm_description: Set model for this operation.
   default: nano-banana-2-lite
   options:
   - value: nano-banana
@@ -54,16 +41,75 @@ parameters:
     label:
       en_US: nano-banana-pro
       zh_Hans: nano-banana-pro
-- name: aspect_ratio
+  - value: nano-banana:official
+    label:
+      en_US: nano-banana:official
+      zh_Hans: nano-banana:official
+  - value: nano-banana-2-lite:official
+    label:
+      en_US: nano-banana-2-lite:official
+      zh_Hans: nano-banana-2-lite:official
+  - value: nano-banana-2:official
+    label:
+      en_US: nano-banana-2:official
+      zh_Hans: nano-banana-2:official
+  - value: nano-banana-pro:official
+    label:
+      en_US: nano-banana-pro:official
+      zh_Hans: nano-banana-pro:official
+- name: prompt
+  type: string
+  required: true
+  form: llm
   label:
-    en_US: Aspect ratio
-    zh_Hans: 画面比例
+    en_US: Prompt
+    zh_Hans: 提示词
+  human_description:
+    en_US: Text prompt used to generate the image.
+    zh_Hans: 用于生成图像的提示词。
+  llm_description: Text prompt used to generate the image.
+- name: image_urls
+  type: string
+  required: false
+  form: form
+  label:
+    en_US: Image Urls
+    zh_Hans: 参考图片链接
+  human_description:
+    en_US: Set image urls for this operation. Enter a JSON array or object where applicable.
+    zh_Hans: 需要编辑的图片链接。可以是可访问的 http 或 https URL，也可以是 `data:image/png;base64,iVBORw0KG...`
+      格式的 Base64 编码图像字符串。每张图片大小不得超过 10MB。当 `action` 为 `edit` 时，此参数为必填项。 数组或对象请使用 JSON
+      格式。
+  llm_description: Set image urls for this operation. Enter a JSON array or object
+    where applicable.
+- name: count
+  type: number
+  required: false
+  form: form
+  label:
+    en_US: Image count
+    zh_Hans: 图片数量
+  human_description:
+    en_US: Number of images to generate; each image is billed at the current service
+      rate.
+    zh_Hans: 要生成或编辑的图片数量，支持 1 到 4，默认为 1。若部分图片生成失败，响应的 `data` 仅包含成功生成的图片，并按成功数量计费。
+  llm_description: Number of images to generate; each image is billed at the current
+    service rate.
+  default: 1
+  min: 1
+  max: 4
+- name: aspect_ratio
   type: select
   required: false
   form: form
+  label:
+    en_US: Aspect ratio
+    zh_Hans: 画面比例
   human_description:
     en_US: Aspect ratio for generation. Default is 1:1.
-    zh_Hans: 生成图片的画面比例。
+    zh_Hans: 生成图像的宽高比。支持的值为 `1:1`、`3:2`、`2:3`、`16:9`、`9:16`、`4:3`、`3:4`。若指定该参数，则无论
+      `action` 为 `generate` 还是 `edit` 都按指定的宽高比生成；若不指定，`action` 为 `generate` 时默认为 `1:1`，`action`
+      为 `edit` 时自动采用 `image_urls` 中第一张图片的宽高比以保留原图构图。注意：在 `edit` 模式下指定与原图差异较大的宽高比，模型会按新比例重绘，可能偏离参考图。
   llm_description: Aspect ratio for generation. Default is 1:1.
   default: '1:1'
   options:
@@ -96,16 +142,19 @@ parameters:
       en_US: '3:4'
       zh_Hans: '3:4'
 - name: resolution
-  label:
-    en_US: Resolution
-    zh_Hans: 分辨率
   type: select
   required: false
   form: form
+  label:
+    en_US: Resolution
+    zh_Hans: 分辨率
   human_description:
-    en_US: Optional. Only works when model is nano-banana-pro.
-    zh_Hans: 输出分辨率；可用选项取决于所选模型。
-  llm_description: Optional. Only works when model is nano-banana-pro.
+    en_US: Set resolution; supported combinations are described by the current API.
+    zh_Hans: 生成图像的分辨率。支持的值为 `1K`、`2K`、`4K`，默认为 `1K`。若指定该参数，则无论 `action` 为 `generate`
+      还是 `edit` 都按指定的分辨率生成（可将较小的参考图重绘为更高分辨率）；若不指定则使用默认值 `1K`。`nano-banana` 与 `nano-banana-2-lite`
+      仅支持 `1K`；`2K` / `4K` 仅适用于支持高分辨率的模型。
+  llm_description: Set resolution; supported combinations are described by the current
+    API.
   default: 1K
   options:
   - value: 1K
@@ -120,38 +169,35 @@ parameters:
     label:
       en_US: 4K
       zh_Hans: 4K
-- name: count
-  label:
-    en_US: Image count
-    zh_Hans: 图片数量
-  type: number
+- name: callback_url
+  type: string
   required: false
   form: form
+  label:
+    en_US: Callback Url
+    zh_Hans: 回调 URL
   human_description:
-    en_US: Number of images to generate; each image is billed at the current service
-      rate.
-    zh_Hans: 一次生成的图片数量；每张图片按当前服务价格计费。
-  llm_description: Number of images to generate; each image is billed at the current
-    service rate.
-  default: 1
+    en_US: Set callback url for this operation.
+    zh_Hans: 图像生成完成后将被调用的回调 URL，该 URL 须可从公网访问。若指定此参数，接口将立即返回响应，生成结果就绪后再发送至该回调地址。
+  llm_description: Set callback url for this operation.
 output_schema:
   type: object
   properties:
     status:
       type: string
+    success:
+      type: boolean
     task_id:
+      type: string
+    trace_id:
       type: string
     media_urls:
       type: array
       items:
         type: string
+    data: {}
     result:
       type: object
-    success:
-      type: boolean
-    trace_id:
-      type: string
-    data: {}
 extra:
   python:
     source: tools/nano_banana_generate.py

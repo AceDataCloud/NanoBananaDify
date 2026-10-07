@@ -28,5 +28,6 @@
       "id": "nano_banana_task_retrieve",
       "class": "NanoBananaTaskRetrieveTool"
     }
-  ]
+  ],
+  "historical_note": "This records the earlier implementation baseline. Current icon bytes and provenance are in tests/branding-source.json, updated after the current-system brand audit."
 }

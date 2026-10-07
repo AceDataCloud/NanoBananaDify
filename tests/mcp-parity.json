@@ -1,0 +1,60 @@
+{
+  "mcp_revision": "f0eed10abf310824cb4c33d4944c63d3654ac95b",
+  "mapping": [
+    {
+      "mcp_tool": "nanobanana_get_task",
+      "dify_tools": [
+        "nano_banana_task_retrieve"
+      ],
+      "parameters": {
+        "task_id": "task_id"
+      },
+      "unresolved": [],
+      "note": "Set action=retrieve"
+    },
+    {
+      "mcp_tool": "nanobanana_get_tasks_batch",
+      "dify_tools": [
+        "nano_banana_tasks_retrieve_batch"
+      ],
+      "parameters": {
+        "task_ids": "ids"
+      },
+      "unresolved": [],
+      "note": "Set action=retrieve_batch"
+    },
+    {
+      "mcp_tool": "nanobanana_generate_image",
+      "dify_tools": [
+        "nano_banana_generate_image"
+      ],
+      "parameters": {
+        "prompt": "prompt",
+        "model": "model",
+        "aspect_ratio": "aspect_ratio",
+        "resolution": "resolution",
+        "count": "count",
+        "callback_url": "callback_url"
+      },
+      "unresolved": [],
+      "note": "Set action=generate"
+    },
+    {
+      "mcp_tool": "nanobanana_edit_image",
+      "dify_tools": [
+        "nano_banana_edit_image"
+      ],
+      "parameters": {
+        "prompt": "prompt",
+        "image_urls": "image_urls",
+        "model": "model",
+        "aspect_ratio": "aspect_ratio",
+        "resolution": "resolution",
+        "count": "count",
+        "callback_url": "callback_url"
+      },
+      "unresolved": [],
+      "note": "Set action=edit"
+    }
+  ]
+}
