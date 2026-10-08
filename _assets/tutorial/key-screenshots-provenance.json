@@ -11,24 +11,15 @@
   },
   "files": [
     {
-      "file": "get-api-key-zh-CN.png",
-      "sha256": "89fb073f51a9bf9446b97550cd5654a4146ea44d4b333e9e437f81a684bc0c5c",
-      "bytes": 35277
-    },
-    {
       "file": "create-api-key-en.png",
       "sha256": "977c06780b36ca33f2fb3ba546e2594efe5895400e4cb58d842eb564c3bb09da",
       "bytes": 25251
-    },
-    {
-      "file": "create-api-key-zh-CN.png",
-      "sha256": "479fad9341b7eb2130da3f022f4dcfafcdbd8573cc9b647f3796128ef4daf5ed",
-      "bytes": 27025
     },
     {
       "file": "get-api-key-en.png",
       "sha256": "b63787f2bd15af82fef9ab61c99e11c454355ac86e91f7f94559386b795069b7",
       "bytes": 33708
     }
-  ]
+  ],
+  "published_screenshot_language": "English only in every locale, per explicit user instruction"
 }
