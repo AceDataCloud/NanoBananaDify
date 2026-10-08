@@ -4,7 +4,7 @@
 
 [English](https://github.com/AceDataCloud/NanoBananaDify/blob/main/README.md) · [当前模型和价格](https://platform.acedata.cloud/models)
 
-> **尚待发布：** 先前 0.0.1 官方 PR 已合并，但市场上传失败。本次 0.0.2 教程版是新的正式提交，不表示已经上架。进展见[故障单 #3247](https://github.com/langgenius/dify-plugins/issues/3247)。Nano 截图来自真实开发预览与之前成功的任务，不是市场安装截图。
+> 下方截图来自真实 Dify 开发预览及此前成功的 API 任务。安装前请在[官方 Marketplace 页面](https://marketplace.dify.ai/plugin/acedatacloud/nano-banana)核对当前可用版本；源码 PR 合并本身不代表市场已经发布。
 
 ## 1. 安装正确的插件
 
