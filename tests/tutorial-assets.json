@@ -14,26 +14,17 @@
     },
     "files": [
       {
-        "file": "get-api-key-zh-CN.png",
-        "sha256": "89fb073f51a9bf9446b97550cd5654a4146ea44d4b333e9e437f81a684bc0c5c",
-        "bytes": 35277
-      },
-      {
         "file": "create-api-key-en.png",
         "sha256": "977c06780b36ca33f2fb3ba546e2594efe5895400e4cb58d842eb564c3bb09da",
         "bytes": 25251
-      },
-      {
-        "file": "create-api-key-zh-CN.png",
-        "sha256": "479fad9341b7eb2130da3f022f4dcfafcdbd8573cc9b647f3796128ef4daf5ed",
-        "bytes": 27025
       },
       {
         "file": "get-api-key-en.png",
         "sha256": "b63787f2bd15af82fef9ab61c99e11c454355ac86e91f7f94559386b795069b7",
         "bytes": 33708
       }
-    ]
+    ],
+    "published_screenshot_language": "English only in every locale, per explicit user instruction"
   },
   "files": [
     {
@@ -49,20 +40,12 @@
       "sha256": "23b9e3decc12e56e548444e555abc4a687072a4cb1046c3d5e992a270fdfbb89"
     },
     {
-      "path": "_assets/tutorial/get-api-key-zh-CN.png",
-      "sha256": "89fb073f51a9bf9446b97550cd5654a4146ea44d4b333e9e437f81a684bc0c5c"
-    },
-    {
       "path": "_assets/tutorial/create-api-key-en.png",
       "sha256": "977c06780b36ca33f2fb3ba546e2594efe5895400e4cb58d842eb564c3bb09da"
     },
     {
       "path": "_assets/tutorial/06-result.png",
       "sha256": "4dc8e38e5f3905d0fadaa723777fa0d79eef29438337b34e20693b09bffde15f"
-    },
-    {
-      "path": "_assets/tutorial/create-api-key-zh-CN.png",
-      "sha256": "479fad9341b7eb2130da3f022f4dcfafcdbd8573cc9b647f3796128ef4daf5ed"
     },
     {
       "path": "_assets/tutorial/04-task-id.png",
@@ -76,5 +59,6 @@
       "path": "_assets/tutorial/get-api-key-en.png",
       "sha256": "b63787f2bd15af82fef9ab61c99e11c454355ac86e91f7f94559386b795069b7"
     }
-  ]
+  ],
+  "published_screenshot_language": "English only"
 }
