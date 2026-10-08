@@ -14,6 +14,40 @@
     }
   },
   {
+    "name": "nano_banana_2_1_generate",
+    "tool": "nano_banana_generate_image",
+    "inputs": {
+      "prompt": "Test",
+      "model": "nano-banana-2.1",
+      "resolution": "4K"
+    },
+    "method": "POST",
+    "path": "/nano-banana/images",
+    "body": {
+      "model": "nano-banana-2.1",
+      "resolution": "4K",
+      "action": "generate"
+    }
+  },
+  {
+    "name": "nano_banana_2_1_edit",
+    "tool": "nano_banana_edit_image",
+    "inputs": {
+      "prompt": "Change the color",
+      "model": "nano-banana-2.1",
+      "resolution": "2K",
+      "image_urls": "[\"https://example.org/reference.png\"]"
+    },
+    "method": "POST",
+    "path": "/nano-banana/images",
+    "body": {
+      "model": "nano-banana-2.1",
+      "resolution": "2K",
+      "action": "edit",
+      "image_urls": ["https://example.org/reference.png"]
+    }
+  },
+  {
     "name": "nano_banana_edit_image-2",
     "tool": "nano_banana_edit_image",
     "inputs": {
