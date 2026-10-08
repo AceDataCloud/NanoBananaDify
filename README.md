@@ -4,7 +4,7 @@ Generate one Nano Banana image from a prompt. This guide takes you from your fir
 
 [Read in Simplified Chinese](https://github.com/AceDataCloud/NanoBananaDify/blob/main/readme/README_zh_Hans.md) · [API and pricing](https://platform.acedata.cloud/models)
 
-> **Publication pending:** the earlier 0.0.1 submission was merged, but its Marketplace upload failed. This 0.0.2 tutorial update is a new submission, not proof of publication. Follow [release issue #3247](https://github.com/langgenius/dify-plugins/issues/3247). The Nano screenshots show a real development preview and previously successful API task, not a Marketplace installation.
+> The screenshots below show a real Dify developer preview and previously successful API task. Check the [official Marketplace listing](https://marketplace.dify.ai/plugin/acedatacloud/nano-banana) for the currently available version before installing; a merged source PR alone does not confirm publication.
 
 ## 1. Install the correct plugin
 
