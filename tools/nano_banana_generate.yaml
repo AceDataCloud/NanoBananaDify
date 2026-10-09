@@ -37,6 +37,10 @@ parameters:
     label:
       en_US: nano-banana-2
       zh_Hans: nano-banana-2
+  - value: nano-banana-2.1
+    label:
+      en_US: nano-banana-2.1
+      zh_Hans: nano-banana-2.1
   - value: nano-banana-pro
     label:
       en_US: nano-banana-pro
