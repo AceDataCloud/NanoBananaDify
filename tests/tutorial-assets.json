@@ -1,6 +1,6 @@
 {
-  "captured": "2026-10-09",
-  "provenance": "Live Dify configuration screenshots and prior real successful results; no new paid generation. Sidebar/identity areas redacted; no success state modified.",
+  "captured": "2026-10-11",
+  "provenance": "Real English Dify UI: October11 signed Marketplace installation and completed generation result replace earlier development preview. Key screenshots and configuration panels retain their recorded October9 source. No UI status was fabricated; screenshots only cropped.",
   "key_source": {
     "captured_at": "2026-10-08T17:15:13.782Z",
     "source_url": "https://platform.acedata.cloud/console/applications",
@@ -28,24 +28,20 @@
   },
   "files": [
     {
-      "path": "_assets/tutorial/02-authorize.png",
-      "sha256": "b0c36a63f374489c1ada2dca392d5d98d6279c7827c905ba88f9a5cb2f0c877c"
+      "path": "_assets/tutorial/01-installed.png",
+      "sha256": "d0a3ccf378a0017ba857b0d5020228697ae6650e3801afa9b2310fd89a1ee15b"
     },
     {
-      "path": "_assets/tutorial/03-workflow.png",
-      "sha256": "b647f3a9fbe13b1253ed12691ca1813542811fd45a510f807fb1b7ac2a2efcd8"
+      "path": "_assets/tutorial/02-authorize.png",
+      "sha256": "923f0859d97af1dca7563d5b39be13bb7d332942fdc0c893e84a5d4f19a42aa0"
     },
     {
       "path": "_assets/tutorial/03-configure.png",
       "sha256": "23b9e3decc12e56e548444e555abc4a687072a4cb1046c3d5e992a270fdfbb89"
     },
     {
-      "path": "_assets/tutorial/create-api-key-en.png",
-      "sha256": "977c06780b36ca33f2fb3ba546e2594efe5895400e4cb58d842eb564c3bb09da"
-    },
-    {
-      "path": "_assets/tutorial/06-result.png",
-      "sha256": "4dc8e38e5f3905d0fadaa723777fa0d79eef29438337b34e20693b09bffde15f"
+      "path": "_assets/tutorial/03-workflow.png",
+      "sha256": "b647f3a9fbe13b1253ed12691ca1813542811fd45a510f807fb1b7ac2a2efcd8"
     },
     {
       "path": "_assets/tutorial/04-task-id.png",
@@ -54,6 +50,14 @@
     {
       "path": "_assets/tutorial/05-output.png",
       "sha256": "952e20414a98f18e82a03853b4e9e594fdf060a9b4713a40b76eedeeb07818a1"
+    },
+    {
+      "path": "_assets/tutorial/06-result.png",
+      "sha256": "a65cca5bb7ceebe2cf5339b2a47610d22bf95702865d2a0a42636eaa9ab25cf5"
+    },
+    {
+      "path": "_assets/tutorial/create-api-key-en.png",
+      "sha256": "977c06780b36ca33f2fb3ba546e2594efe5895400e4cb58d842eb564c3bb09da"
     },
     {
       "path": "_assets/tutorial/get-api-key-en.png",
