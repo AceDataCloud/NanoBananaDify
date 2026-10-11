@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "repo": "NanoBananaDify",
+  "version": "0.0.3",
+  "model": "nano-banana-2.1",
+  "transport": "official remote-debug development preview",
+  "marketplace_installation": false,
+  "browser_test_run": true,
+  "workflow_run_id": "565fee4e-ca28-4090-b60a-ef49b4fe4978",
+  "task_id": "3e1dc241-8b74-459c-9952-217964255d5c",
+  "trace_id": "393c3a1f-eef1-4028-a977-84d27ec94337",
+  "terminal_status": "succeeded",
+  "new_paid_calls": 1,
+  "billing": {
+    "id": "74ff5614-4560-4904-87c2-eaa866f99882",
+    "trace_id": "393c3a1f-eef1-4028-a977-84d27ec94337",
+    "status_code": 200,
+    "deducted_amount": 0.18,
+    "created_at": "2026-10-11T01:16:20.227390Z",
+    "api_id": "9d8a117e-31ca-4322-a0fd-1771296ec610"
+  },
+  "media": [
+    {
+      "url": "https://cdn.acedata2.cloud/nanobanana/4cf46689f2d10f4722c07236eab8f3e80f5e923e68c8a6699691085a5cd16558.jpg",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "a6bfecae31453fbc38717a6a8a016d2cb6986c4ec38a64f4c518371248bef0fa"
+    }
+  ],
+  "all_nodes_succeeded": true,
+  "screenshot": "tests/evidence/nano-21-dify-20261011.png",
+  "scope": "One1K text-to-image case. Editing and2K/4K are contract-covered, not separately live-tested in Dify.",
+  "tested_at": "2026-10-11T01:18:36.018582+00:00"
+}

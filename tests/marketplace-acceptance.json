@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "repo": "NanoBananaDify",
+  "version": "0.0.2",
+  "model": "nano-banana-2-lite",
+  "browser_test_run": true,
+  "workflow_run_id": "b84ada9d-4a14-42ca-8f94-02773d27f413",
+  "task_id": "0cd803d6-6cf6-4b29-b73b-520b1ad3d752",
+  "trace_id": "1dd6d8ae-bcb7-4746-8fb7-bfb3113fbabd",
+  "terminal_status": "succeeded",
+  "new_paid_calls": 1,
+  "billing": {
+    "id": "39296244-c3b5-4a5f-8366-f3bb6f77181c",
+    "trace_id": "1dd6d8ae-bcb7-4746-8fb7-bfb3113fbabd",
+    "status_code": 200,
+    "deducted_amount": 0.126,
+    "created_at": "2026-10-11T01:08:30.580507Z",
+    "api_id": "9d8a117e-31ca-4322-a0fd-1771296ec610"
+  },
+  "media": [
+    {
+      "url": "https://cdn.acedata2.cloud/nanobanana/210d508ea6dd0cfecc6394a7796c472eee8268ae93016df1126da42aeea4a14a.jpg",
+      "width": 1024,
+      "height": 1024,
+      "format": "JPEG",
+      "sha256": "02fbd89fce5c71c01ec6c4d15072cc7d76ece9f34c2a865c83e2dcb56aff1791"
+    }
+  ],
+  "all_nodes_succeeded": true,
+  "screenshot": "tests/evidence/marketplace-20261011.png",
+  "tested_at": "2026-10-11T01:18:36.017356+00:00"
+}
