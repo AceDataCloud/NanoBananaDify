@@ -69,6 +69,8 @@ A single teal ceramic cube on a plain cream background, studio product photograp
 
 For editing, select **Nano Banana Edit Image**, set **Reference image URLs** to a JSON array such as `["https://your-domain.example/input.png"]`, and describe the change. Replace the placeholder URL with your own accessible image. Model variants have separate access and pricing.
 
+Source version 0.0.7 leaves **Aspect ratio** empty by default for editing, preserving the first reference image's ratio. A saved workflow with an explicit ratio keeps that choice. `nano-banana` and `nano-banana-2-lite`, including their `:official` variants, require `1K`; incompatible resolutions are rejected before submission. Generation defaults are unchanged. This source update is separate from Marketplace publication; check your installed version.
+
 ![Fill the generation or search parameters](https://raw.githubusercontent.com/AceDataCloud/NanoBananaDify/2522b2f57210597af2db866445319334a1677a23/_assets/tutorial/03-configure.png)
 
 ## 5. Wait for the same task and map the result

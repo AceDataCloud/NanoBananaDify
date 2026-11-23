@@ -142,7 +142,6 @@ ENDPOINTS = {
         "parameters": [],
         "defaults": {
             "model": "nano-banana-2-lite",
-            "aspect_ratio": "1:1",
             "resolution": "1K",
             "count": 1,
         },

@@ -534,4 +534,18 @@ def finalize_payload(
     if endpoint["path"].endswith("/images"):
         if endpoint["operation"] == "edit" and not body.get("image_urls"):
             raise ValueError("Reference images are required for editing.")
+        if (
+            body.get("model", "nano-banana")
+            in (
+                "nano-banana",
+                "nano-banana:official",
+                "nano-banana-2-lite",
+                "nano-banana-2-lite:official",
+            )
+            and body.get("resolution", "1K") != "1K"
+        ):
+            raise ValueError(
+                "The selected model supports 1K only. Choose 1K or explicitly select a model "
+                "that supports 2K/4K."
+            )
     return body
