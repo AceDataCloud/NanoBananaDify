@@ -69,6 +69,8 @@ A single teal ceramic cube on a plain cream background, studio product photograp
 
 编辑图片时选择 **Nano Banana Edit Image**，参考图片链接填 JSON 数组，例如 `["https://your-domain.example/input.png"]`，再描述需要的修改。示例域名不是可用素材，必须换成自己的可访问图片；不同模型变体分别核对权限与价格。
 
+源码版本 0.0.7 的编辑工具默认留空 **画面比例**，保留第一张参考图的比例；已保存工作流中显式选择的比例会继续生效。`nano-banana`、`nano-banana-2-lite` 及各自的 `:official` 变体仅支持 `1K`，不兼容的分辨率会在提交前报错。生成工具的默认值不变。源码更新与市场发布是两个独立步骤，请核对已安装版本。
+
 ![填写实际参数](https://raw.githubusercontent.com/AceDataCloud/NanoBananaDify/2522b2f57210597af2db866445319334a1677a23/_assets/tutorial/03-configure.png)
 
 ## 5. 绑定同一个任务并等待结果
