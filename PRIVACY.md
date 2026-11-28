@@ -1,4 +1,4 @@
-# Privacy policy — Nano Banana by Ace Data Cloud
+# Privacy policy — Nano Banana
 
 Effective date: 2026-10-07. Maintainer/contact: Ace Data Cloud, dev@acedata.cloud.
 
