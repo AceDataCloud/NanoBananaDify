@@ -1,6 +1,6 @@
 # Nano Banana for Dify: step-by-step guide
 
-**Nano Banana by Ace Data Cloud** is the independently installable Ace integration, not an official Nano Banana account or endorsement. The plugin is free; service requests follow your Ace account permissions and current pricing.
+**Nano Banana** is the independently installable Ace integration, not an official Nano Banana account or endorsement. The plugin is free; service requests follow your Ace account permissions and current pricing.
 
 **Version 0.0.5 guide:** the explicit provider label, Marketplace `image` category and in-product Applications link apply when this version is installed. Check the version in your workspace and the [Marketplace entry](https://marketplace.dify.ai/plugin/acedatacloud/nano-banana); an older public or installed package may show the previous label. Existing screenshots are real historical interface captures, not screenshots of this metadata update.
 
